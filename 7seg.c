@@ -7,7 +7,7 @@
 #else
 #define CLEAR "clear"
 #endif
-
+#define MAX 25
 char s;
 char buff[MAX*6];
 int data[MAX][7];
@@ -39,7 +39,7 @@ int main(void)
 void imprimirSegmentos(void)
 {
   cls();
-  printf(MSG_BIENVENIDA); printf("(%s comun)", (com == 1)? MSG_CATHODE: MSG_ANODE); printf(MSG_SEGMENTOS); endl();
+  printf(MSG_BIENVENIDA); printf("(%s com)", (com == 1)? MSG_CATHODE: MSG_ANODE); printf(MSG_SEGMENTOS); endl();
   strcpy(buff, "");
   strcat(buff, "  ");
   for (i = 0; i < actual; i++) 
@@ -132,7 +132,7 @@ void ayuda(void)
 void imprimirTablas(void)
 {
   cls();
-  printf(MSG_BIENVENIDA); printf("(%s comun)", (com == 1)? MSG_CATHODE: MSG_ANODE); printf(MSG_TABLAS);  endl();
+  printf(MSG_BIENVENIDA); printf("(%s com)", (com == 1)? MSG_CATHODE: MSG_ANODE); printf(MSG_TABLAS);  endl();
   for (i = 0; i < MAX; i++) {
     printf("'d'%i => 'b'", i+indice);
     for (j = 0; j < 7; j++) {
